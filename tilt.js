@@ -1,5 +1,5 @@
 const tiltBg = document.querySelector('.tilt_bg');
-const tiltText = tiltBg.querySelectorAll('.text_main, .text_sub');
+const tiltText = tiltBg.querySelectorAll('.tiltY, .text_sub');
 const tiltImg = tiltBg.querySelectorAll('.scroll_tilt');
 const tiltImg2 = tiltBg.querySelectorAll('.scroll_tilt2');
 

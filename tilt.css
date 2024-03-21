@@ -55,6 +55,13 @@ html {
   padding-top: 50rem;
   padding-bottom: 40rem;
   overflow: hidden;
+  position: relative;
+}
+@media (max-width: 576px) {
+  .main_tilt {
+    padding-top: 260px;
+    padding-bottom: 220px;
+  }
 }
 .main_tilt .overlay_noise {
   position: fixed;
@@ -64,12 +71,23 @@ html {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background: transparent url("noise_bs.png") repeat 0 0;
   background-repeat: cover;
   animation: bg-animation 0.25s infinite;
   visibility: visible;
   z-index: 10;
-  opacity: 0.9;
+  opacity: 0.75;
+}
+@media (max-width: 576px) {
+  .main_tilt .overlay_noise {
+    opacity: 0.5;
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .main_tilt .overlay_noise--n {
+    display: none;
+  }
 }
 
 @keyframes bg-animation {
@@ -121,6 +139,11 @@ html {
   will-change: transform;
   color: #fff;
 }
+@media (max-width: 576px) {
+  .tilt_bg {
+    width: auto;
+  }
+}
 .tilt_bg .team_bg {
   position: absolute;
   width: 140rem;
@@ -129,6 +152,11 @@ html {
   transform: translate3d(-50%, -50%, 50px);
   transition: top 0.1s ease-out;
 }
+@media (max-width: 576px) {
+  .tilt_bg .team_bg {
+    width: 175rem;
+  }
+}
 .tilt_bg .bs_chars {
   position: absolute;
   width: 150rem;
@@ -136,6 +164,12 @@ html {
   left: 50%;
   transform: translate3d(-50%, -50%, 175px);
   transition: top 0.1s ease-out;
+}
+@media (max-width: 576px) {
+  .tilt_bg .bs_chars {
+    width: 260rem;
+    left: 101rem;
+  }
 }
 .tilt_bg .bs_chars_shadow {
   position: absolute;
@@ -146,13 +180,25 @@ html {
   opacity: 0.6;
   transition: top 0.1s ease-out;
 }
+@media (max-width: 576px) {
+  .tilt_bg .bs_chars_shadow {
+    width: 260rem;
+    left: 101rem;
+  }
+}
 .tilt_bg .text_main {
   position: absolute;
   top: -22rem;
   right: 16rem;
   transition: top 0.1s ease-out;
   transform: translate3d(0%, 0, 90px);
-  opacity: 0.8;
+  opacity: 0.85;
+}
+@media (max-width: 576px) {
+  .tilt_bg .text_main {
+    top: -97rem;
+    right: 17rem;
+  }
 }
 .tilt_bg .text_main .name {
   line-height: 82%;
@@ -160,6 +206,12 @@ html {
   text-align: end;
   font-weight: 900;
   margin-bottom: 2rem;
+}
+@media (max-width: 576px) {
+  .tilt_bg .text_main .name {
+    font-size: 40rem;
+    margin-bottom: 4rem;
+  }
 }
 .tilt_bg .text_main .descr {
   font-family: "Dinpro_bold";
@@ -169,6 +221,12 @@ html {
   margin-left: auto;
   position: relative;
   transform: translate3d(7rem, 0, 100px);
+}
+@media (max-width: 576px) {
+  .tilt_bg .text_main .descr {
+    font-size: 5.7rem;
+    width: 90rem;
+  }
 }
 .tilt_bg .char_pos {
   position: absolute;
@@ -180,7 +238,12 @@ html {
   color: #fff;
   display: flex;
   flex-direction: column;
-  opacity: 0.75;
+  opacity: 0.85;
+}
+@media (max-width: 576px) {
+  .tilt_bg .char_pos {
+    display: none;
+  }
 }
 .tilt_bg .char_pos .name {
   font-family: "Dinpro_bold";
@@ -209,26 +272,101 @@ html {
   transform: translate3d(0%, 0, 200px);
   opacity: 0.8;
 }
+@media (max-width: 576px) {
+  .tilt_bg .punkt {
+    left: 3.5%;
+  }
+}
 .tilt_bg .punkt .num {
   font-family: "Dinpro_bold";
   font-size: 10rem;
   text-transform: uppercase;
   margin-bottom: 5rem;
 }
+@media (max-width: 576px) {
+  .tilt_bg .punkt .num {
+    font-size: 23rem;
+    margin-bottom: 10.5rem;
+  }
+}
 .tilt_bg .punkt .descr {
   font-family: "Dinpro_medium";
   font-size: 4rem;
   line-height: 105%;
 }
+@media (max-width: 576px) {
+  .tilt_bg .punkt .descr {
+    font-size: 7rem;
+  }
+}
 .tilt_bg .punkt--1 {
   top: 30rem;
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .tilt_bg .punkt--1 {
+    top: 36rem;
+  }
 }
 .tilt_bg .punkt--2 {
   top: 60rem;
+  opacity: 0.9;
+}
+@media (max-width: 576px) {
+  .tilt_bg .punkt--2 {
+    top: 88rem;
+    opacity: 1;
+  }
 }
 .tilt_bg .punkt--3 {
   top: 93rem;
 }
+@media (max-width: 576px) {
+  .tilt_bg .punkt--3 {
+    top: 148rem;
+    opacity: 1;
+  }
+}
 .tilt_bg .punkt--4 {
   top: 123rem;
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .tilt_bg .punkt--4 {
+    top: 221rem;
+    left: 37rem;
+  }
+}
+.tilt_bg .punkt--5 {
+  left: auto;
+  right: 6rem;
+  top: 85rem;
+  opacity: 1;
+  transform: translate3d(0%, 0, 220px);
+}
+@media (max-width: 576px) {
+  .tilt_bg .punkt--5 {
+    top: 120rem;
+    right: 3.5%;
+  }
+}
+.tilt_bg .punkt--6 {
+  left: auto;
+  right: 6rem;
+  top: 133rem;
+  opacity: 1;
+  transform: translate3d(0%, 0, 220px);
+}
+@media (max-width: 576px) {
+  .tilt_bg .punkt--6 {
+    right: 3.5%;
+    top: 188rem;
+  }
+}
+.tilt_bg .punkt--7 {
+  left: auto;
+  right: 0rem;
+  top: 153rem;
+  opacity: 1;
+  transform: translate3d(0%, 0, 220px);
 }
