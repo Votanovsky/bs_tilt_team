@@ -2,6 +2,7 @@ const tiltBg = document.querySelector('.tilt_bg');
 const tiltText = tiltBg.querySelectorAll('.tiltY, .text_sub');
 const tiltImg = tiltBg.querySelectorAll('.scroll_tilt');
 const tiltImg2 = tiltBg.querySelectorAll('.scroll_tilt2');
+const breakpointMob = 992;
 
 // let imgTop = parseFloat(getComputedStyle(tiltImg).top);
 let textTop = [];
@@ -32,5 +33,17 @@ window.onscroll = function(e) {
     //     t.style.top = imgTop2[i] + window.scrollY * 0.09 + 'px';
     // }
     // tiltImg.style.top = imgTop + window.scrollY * 0.2 + 'px'; 
-    console.log(window.scrollY, tiltImg)
+    // console.log(window.scrollY, tiltImg)
+}
+
+
+if (window.innerWidth > breakpointMob) {
+    VanillaTilt.init(tiltBg, {
+        reverse: false,
+		max: 10,
+		speed: 5000,
+        axis: "x",
+        perspective: 2000,
+        startX: -20
+	});
 }
